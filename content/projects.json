@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "network-processing", "category": "data", "diagram": "network", "featured": true,
+    "period": { "ko": "재직 4년차", "en": "Career · Year 4" },
+    "title": { "ko": "네트워크 데이터,\n탐색의 병목을 줄이다", "en": "Rethinking network\naddress lookup" },
+    "summary": { "ko": "CIDR 대역 포함 여부를 찾는 과정에 이진탐색과 Numba를 적용한 전처리 최적화.", "en": "Preprocessing optimization with binary search and Numba for IP-to-CIDR membership lookup." },
+    "role": { "ko": "전처리 탐색 최적화", "en": "Preprocessing lookup optimization" },
+    "tags": ["Python", "PySpark", "Numba"],
+    "stage": "experience", "cover": "", "media": [], "links": []
+  },
+  {
+    "slug": "drone-following", "category": "robotics", "diagram": "drone", "featured": true,
+    "period": { "ko": "대학교 4학년", "en": "University · Year 4" },
+    "title": { "ko": "보고, 추정하고,\n앞선 드론을 따라가다", "en": "Perceive, estimate,\nfollow the drone" },
+    "summary": { "ko": "깊이 카메라와 YOLO 인식 결과에서 중심 위치를 추정하고 노이즈를 제거한 드론 추종 개발.", "en": "Drone following with depth-camera perception, YOLO detections, center estimation, and noise filtering." },
+    "role": { "ko": "비전 기반 위치 추정·추종 개발", "en": "Vision-based position estimation and following" },
+    "tags": ["YOLO", "Depth camera", "Simulation"],
+    "stage": "simulation", "cover": "", "media": [], "links": []
+  },
+  {
+    "slug": "order-automation", "category": "data", "diagram": "orders", "featured": false,
+    "period": { "ko": "재직 5년차 · 개인 프로젝트", "en": "Career · Year 5 · Personal project" },
+    "title": { "ko": "주문에서\n생산 계획까지", "en": "From orders\nto production planning" },
+    "summary": { "ko": "ERP Open API를 활용해 주문·재고·제조수량 관리와 생산 계획 자동화를 만드는 개인 프로젝트.", "en": "An ongoing ERP API project for order and inventory visibility and automated production planning." },
+    "role": { "ko": "주문 자동화 프로그램 개발", "en": "Order automation development" },
+    "tags": ["Python", "ERP API", "Codex"],
+    "stage": "in-progress", "cover": "", "media": [], "links": []
+  },
+  {
+    "slug": "vehicle-analysis", "category": "data", "diagram": "vehicle", "featured": false,
+    "period": { "ko": "재직 3년차", "en": "Career · Year 3" },
+    "title": { "ko": "차량 분류 기준을\n실행 가능한 코드로", "en": "Vehicle classification\ncriteria, implemented" },
+    "summary": { "ko": "보험사 제안을 위한 대형차 데이터 분석. Excel 업무를 Python으로 옮기고 주어진 분류 기준을 구현.", "en": "Large-vehicle data analysis for an insurer proposal, translating an Excel workflow and supplied classification criteria into Python." },
+    "role": { "ko": "분석·분류 코드 전체 개발", "en": "Analysis and classification code development" },
+    "tags": ["Python", "pandas", "Excel"],
+    "stage": "experience", "cover": "", "media": [], "links": []
+  },
+  {
+    "slug": "foundry-tracking", "category": "data", "diagram": "foundry", "featured": false,
+    "period": { "ko": "재직 5년차", "en": "Career · Year 5" },
+    "title": { "ko": "위치 정보를\n사용자 화면으로", "en": "Location data,\nbrought into view" },
+    "summary": { "ko": "Palantir Foundry 기반 위치 추적 개발과 위치 정보를 전달하는 UI/UX 구현 경험.", "en": "Location-tracking development in Palantir Foundry, including the UI/UX for presenting location information." },
+    "role": { "ko": "위치 추적 및 UI/UX 개발", "en": "Location tracking and UI/UX development" },
+    "tags": ["Palantir Foundry", "UI/UX"],
+    "stage": "experience", "cover": "", "media": [], "links": []
+  },
+  {
+    "slug": "delta-robot", "category": "robotics", "diagram": "delta", "featured": false,
+    "period": { "ko": "대학교 3학년", "en": "University · Year 3" },
+    "title": { "ko": "델타로봇,\n설계에서 개발까지", "en": "A delta robot,\nfrom design to development" },
+    "summary": { "ko": "대학교 3학년 때 진행한 델타로봇 설계 및 개발 프로젝트.", "en": "A delta robot design and development project from my third year at university." },
+    "role": { "ko": "설계 및 개발 참여", "en": "Design and development" },
+    "tags": ["Robotics", "Design"],
+    "stage": "archive", "cover": "", "media": [], "links": []
+  }
+]

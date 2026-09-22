@@ -1,0 +1,27 @@
+{
+  "name": "twa04047",
+  "github": "https://github.com/twa04047",
+  "linkedin": "",
+  "email": "",
+  "intro": {
+    "ko": "데이터를 다루고,\n움직임을 만듭니다.",
+    "en": "Working with data.\nBuilding motion."
+  },
+  "description": {
+    "ko": "데이터 처리와 업무 자동화부터 로봇·자율 시스템까지. 직접 구현하고 개선해 온 프로젝트를 기록합니다.",
+    "en": "Projects in data processing, workflow automation, and autonomous systems. A record of what I have built and improved."
+  },
+  "about": {
+    "ko": "현재 데이터 사이언티스트로 일하며 데이터 처리 개발을 중심으로 다양한 문제를 다루고 있습니다. 데이터 기반 프로젝트의 전체 흐름을 구현하는 일과 로봇·자율 시스템 개발에 관심이 있습니다.",
+    "en": "I currently work as a data scientist, with much of my hands-on experience in data processing. My interests span end-to-end data applications and robotics and autonomous systems."
+  },
+  "timeline": [
+    { "period": { "ko": "재직 5년차", "en": "Career · Year 5" }, "title": { "ko": "데이터에서 업무 흐름으로", "en": "From data to workflows" }, "body": { "ko": "Foundry 기반 위치 추적 · Azure CI/CD 및 Kubernetes 기반 LLM 서빙 · ERP 주문 자동화 개발 중", "en": "Foundry location tracking · Azure CI/CD and Kubernetes-based LLM serving · ERP order automation in progress" } },
+    { "period": { "ko": "재직 4년차", "en": "Career · Year 4" }, "title": { "ko": "네트워크 데이터와 처리 최적화", "en": "Network data and processing" }, "body": { "ko": "네트워크 이상감지 전처리 최적화 · Palantir 엔지니어와 Foundry PoC 협업 · SQL 기반 해킹사태 분석", "en": "Preprocessing optimization for network anomaly detection · Foundry PoC with Palantir engineers · SQL analysis of a security incident" } },
+    { "period": { "ko": "재직 3년차", "en": "Career · Year 3" }, "title": { "ko": "차량데이터 분석의 코드화", "en": "Vehicle analysis in code" }, "body": { "ko": "Excel 업무의 Python 전환 · pandas 기반 차량데이터 분석 및 사고차량 분류 기준 구현", "en": "Excel-to-Python workflow conversion · pandas vehicle analysis and implementation of accident-vehicle classification criteria" } },
+    { "period": { "ko": "재직 2년차", "en": "Career · Year 2" }, "title": { "ko": "개발과 배포의 연결", "en": "Connecting development and delivery" }, "body": { "ko": "Kubernetes · Jenkins · GitLab 기반 CI/CD 체계 구축", "en": "CI/CD infrastructure with Kubernetes, Jenkins, and GitLab" } },
+    { "period": { "ko": "재직 1년차", "en": "Career · Year 1" }, "title": { "ko": "사업과 프로젝트 운영", "en": "Business and project operations" }, "body": { "ko": "프로젝트 BA로서 사내 사업 운영", "en": "Internal business operations as a project business analyst" } },
+    { "period": { "ko": "대학교 4학년", "en": "University · Year 4" }, "title": { "ko": "시뮬레이션 속 자율비행", "en": "Autonomous flight in simulation" }, "body": { "ko": "깊이 카메라와 YOLO를 활용한 드론 인식 및 추종 개발", "en": "Drone perception and following using a depth camera and YOLO" } },
+    { "period": { "ko": "대학교 3학년", "en": "University · Year 3" }, "title": { "ko": "로봇 설계에서 출발", "en": "Starting with robot design" }, "body": { "ko": "델타로봇 설계 및 개발", "en": "Delta robot design and development" } }
+  ]
+}
