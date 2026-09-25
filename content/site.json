@@ -1,27 +1,70 @@
 {
-  "name": "twa04047",
+  "name": "장지호",
+  "nameEn": "JIHO JANG",
   "github": "https://github.com/twa04047",
-  "linkedin": "",
-  "email": "",
+  "linkedin": "https://www.linkedin.com/in/jiho-jang-3962a0362",
+  "email": "twa04047@gmail.com",
+  "profile": {
+    "photo": "media/profile/portrait.jpg",
+    "photoAlt": { "ko": "장지호 프로필 사진", "en": "Portrait of JIHO JANG" },
+    "facts": [
+      {
+        "label": { "ko": "현재 소속", "en": "Currently at" },
+        "title": { "ko": "kt AX Data Lab", "en": "kt AX Data Lab" },
+        "detail": { "ko": "데이터 연구소 · 2025–현재", "en": "Data Research Lab · 2025–present" }
+      },
+      {
+        "label": { "ko": "학력", "en": "Education" },
+        "title": { "ko": "경북대학교 기계공학부", "en": "Kyungpook National University" },
+        "detail": { "ko": "2016–2022", "en": "Mechanical Engineering · 2016–2022" }
+      }
+    ]
+  },
   "intro": {
     "ko": "데이터를 다루고,\n움직임을 만듭니다.",
     "en": "Working with data.\nBuilding motion."
   },
   "description": {
-    "ko": "데이터 처리와 업무 자동화부터 로봇·자율 시스템까지. 직접 구현하고 개선해 온 프로젝트를 기록합니다.",
-    "en": "Projects in data processing, workflow automation, and autonomous systems. A record of what I have built and improved."
+    "ko": "로봇을 설계하던 기계공학도에서, 데이터로 업무를 개선하는 개발자로. kt AX Data Lab에서 데이터 처리와 자동화를 다루고 있습니다.",
+    "en": "From designing robots as a mechanical engineering student to improving workflows with data. I work on data processing and automation at kt AX Data Lab."
   },
+  "skills": [
+    { "title": { "ko": "데이터 & 플랫폼", "en": "Data & platforms" }, "items": [
+      { "name": "Python", "icon": "media/tech/python.svg" },
+      { "name": "pandas", "icon": "media/tech/pandas.svg" },
+      { "name": "PySpark", "icon": "media/tech/apachespark.svg" },
+      { "name": "Palantir Foundry", "icon": "media/tech/palantir.svg" },
+      { "name": "Databricks", "icon": "media/tech/databricks.svg" }
+    ] },
+    { "title": { "ko": "클라우드 & 개발", "en": "Cloud & development" }, "items": [
+      { "name": "Azure", "icon": "media/tech/azure.svg" },
+      { "name": "Kubernetes", "icon": "media/tech/kubernetes.svg" },
+      { "name": "CI/CD", "icon": "media/tech/cicd.svg" },
+      { "name": "GitHub", "icon": "media/tech/github.svg" }
+    ] },
+    { "title": { "ko": "로봇 & 비전", "en": "Robotics & vision" }, "items": [
+      { "name": "C++", "icon": "media/tech/cplusplus.svg" },
+      { "name": "ROS", "icon": "media/tech/ros.svg" },
+      { "name": "YOLO", "icon": "media/tech/yolo.svg" }
+    ] }
+  ],
   "about": {
-    "ko": "현재 데이터 사이언티스트로 일하며 데이터 처리 개발을 중심으로 다양한 문제를 다루고 있습니다. 데이터 기반 프로젝트의 전체 흐름을 구현하는 일과 로봇·자율 시스템 개발에 관심이 있습니다.",
-    "en": "I currently work as a data scientist, with much of my hands-on experience in data processing. My interests span end-to-end data applications and robotics and autonomous systems."
+    "ko": "기계공학과 로봇 프로젝트에서 출발해, 현재는 kt AX Data Lab에서 데이터 처리와 업무 자동화를 다루고 있습니다. 데이터를 가공하는 코드부터 사용자가 실제로 쓰는 화면까지, 하나의 흐름으로 구현하는 일을 좋아합니다. 로봇·자율 시스템 개발에도 꾸준히 관심을 이어가고 있습니다.",
+    "en": "My work began with mechanical engineering and robotics projects. Today, I focus on data processing and workflow automation at kt AX Data Lab. I enjoy connecting data-processing code to interfaces people can use, while continuing to explore robotics and autonomous systems."
   },
   "timeline": [
-    { "period": { "ko": "재직 5년차", "en": "Career · Year 5" }, "title": { "ko": "데이터에서 업무 흐름으로", "en": "From data to workflows" }, "body": { "ko": "Foundry 기반 위치 추적 · Azure CI/CD 및 Kubernetes 기반 LLM 서빙 · ERP 주문 자동화 개발 중", "en": "Foundry location tracking · Azure CI/CD and Kubernetes-based LLM serving · ERP order automation in progress" } },
-    { "period": { "ko": "재직 4년차", "en": "Career · Year 4" }, "title": { "ko": "네트워크 데이터와 처리 최적화", "en": "Network data and processing" }, "body": { "ko": "네트워크 이상감지 전처리 최적화 · Palantir 엔지니어와 Foundry PoC 협업 · SQL 기반 해킹사태 분석", "en": "Preprocessing optimization for network anomaly detection · Foundry PoC with Palantir engineers · SQL analysis of a security incident" } },
-    { "period": { "ko": "재직 3년차", "en": "Career · Year 3" }, "title": { "ko": "차량데이터 분석의 코드화", "en": "Vehicle analysis in code" }, "body": { "ko": "Excel 업무의 Python 전환 · pandas 기반 차량데이터 분석 및 사고차량 분류 기준 구현", "en": "Excel-to-Python workflow conversion · pandas vehicle analysis and implementation of accident-vehicle classification criteria" } },
-    { "period": { "ko": "재직 2년차", "en": "Career · Year 2" }, "title": { "ko": "개발과 배포의 연결", "en": "Connecting development and delivery" }, "body": { "ko": "Kubernetes · Jenkins · GitLab 기반 CI/CD 체계 구축", "en": "CI/CD infrastructure with Kubernetes, Jenkins, and GitLab" } },
-    { "period": { "ko": "재직 1년차", "en": "Career · Year 1" }, "title": { "ko": "사업과 프로젝트 운영", "en": "Business and project operations" }, "body": { "ko": "프로젝트 BA로서 사내 사업 운영", "en": "Internal business operations as a project business analyst" } },
-    { "period": { "ko": "대학교 4학년", "en": "University · Year 4" }, "title": { "ko": "시뮬레이션 속 자율비행", "en": "Autonomous flight in simulation" }, "body": { "ko": "깊이 카메라와 YOLO를 활용한 드론 인식 및 추종 개발", "en": "Drone perception and following using a depth camera and YOLO" } },
-    { "period": { "ko": "대학교 3학년", "en": "University · Year 3" }, "title": { "ko": "로봇 설계에서 출발", "en": "Starting with robot design" }, "body": { "ko": "델타로봇 설계 및 개발", "en": "Delta robot design and development" } }
+    {
+      "period": { "ko": "2022–현재", "en": "2022–present" },
+      "title": { "ko": "kt", "en": "kt" },
+      "body": { "ko": "2022년 입사 · 재직 중", "en": "Joined in 2022 · Current employer" },
+      "positions": [
+        { "period": { "ko": "2025–현재", "en": "2025–present" }, "title": { "ko": "AX Data Lab", "en": "AX Data Lab" }, "body": { "ko": "데이터 연구소", "en": "Data Research Lab" } },
+        { "period": { "ko": "2022–2024", "en": "2022–2024" }, "title": { "ko": "Service Tech Lab", "en": "Service Tech Lab" }, "body": { "ko": "모빌리티 연구소", "en": "Mobility Research Lab" } }
+      ]
+    },
+    { "period": { "ko": "2021–2022", "en": "2021–2022" }, "title": { "ko": "kt 인턴", "en": "Intern at kt" }, "body": { "ko": "인턴 근무", "en": "Internship" } },
+    { "period": { "ko": "2021 · 1년", "en": "2021 · 1 year" }, "title": { "ko": "자율주행 시스템 연구소", "en": "Autonomous Systems Lab" }, "body": { "ko": "전자공학부 소속 · 학부연구생", "en": "Undergraduate researcher · School of Electronics Engineering" } },
+    { "period": { "ko": "2020 · 1년", "en": "2020 · 1 year" }, "title": { "ko": "ROBO 회장", "en": "President of ROBO" }, "body": { "ko": "경북대학교 기계공학부 로봇 동아리", "en": "Robotics club · Mechanical Engineering, Kyungpook National University" } },
+    { "period": { "ko": "2016–2022", "en": "2016–2022" }, "title": { "ko": "경북대학교", "en": "Kyungpook National University" }, "body": { "ko": "기계공학부", "en": "Mechanical Engineering" } }
   ]
 }

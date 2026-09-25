@@ -18,7 +18,7 @@ const failures = [];
 for (const file of htmlFiles) {
   const html = await readFile(file, 'utf8');
   if (!/<html lang="(ko|en)"/.test(html)) failures.push(`${file}: missing language`);
-  for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
+  for (const match of html.matchAll(/\b(?:href|src|poster)="([^"]+)"/g)) {
     const href = match[1].replaceAll('&amp;', '&');
     if (/^(?:https?:|mailto:|data:)/.test(href)) continue;
     const url = new URL(href, 'https://portfolio.test/' + path.relative(dist, file));

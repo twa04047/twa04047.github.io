@@ -39,3 +39,27 @@ if (filters.length) {
     switchLink.href = alternate.href;
   }
 }
+
+document.querySelectorAll('.media-gallery figure').forEach(figure => {
+  const video = figure.querySelector('video');
+  if (!video) return;
+  let requestedTime = null;
+  const seek = () => {
+    if (requestedTime === null) return;
+    video.currentTime = Math.min(requestedTime, video.duration);
+    requestedTime = null;
+  };
+  video.addEventListener('loadedmetadata', seek);
+  figure.querySelectorAll('[data-video-time]').forEach(link => {
+    link.addEventListener('click', event => {
+      const time = Number(link.dataset.videoTime);
+      if (!Number.isFinite(time) || time < 0) return;
+      event.preventDefault();
+      requestedTime = time;
+      if (video.readyState >= 1) seek();
+      // Calling play from the click also starts loading a preload="none" video.
+      // If playback is blocked, native controls remain available at the requested time.
+      video.play().catch(() => {});
+    });
+  });
+});

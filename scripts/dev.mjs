@@ -1,11 +1,12 @@
 import http from 'node:http';
-import { readFile, stat, watch } from 'node:fs/promises';
+import { stat, watch } from 'node:fs/promises';
+import { createReadStream } from 'node:fs';
 import path from 'node:path';
 import { build, root } from './build.mjs';
 
 await build();
 const dist = path.join(root, 'dist');
-const mime = { '.html':'text/html; charset=utf-8', '.css':'text/css; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.svg':'image/svg+xml', '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg', '.webp':'image/webp', '.gif':'image/gif', '.mp4':'video/mp4', '.webm':'video/webm', '.vtt':'text/vtt' };
+const mime = { '.html':'text/html; charset=utf-8', '.css':'text/css; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.svg':'image/svg+xml', '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg', '.webp':'image/webp', '.gif':'image/gif', '.mp4':'video/mp4', '.webm':'video/webm', '.vtt':'text/vtt', '.pdf':'application/pdf' };
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');
@@ -16,8 +17,25 @@ const server = http.createServer(async (req, res) => {
       if (!url.pathname.endsWith('/')) { res.writeHead(301, { location: url.pathname + '/' + url.search }).end(); return; }
       filename = path.join(filename, 'index.html');
     }
-    res.writeHead(200, { 'content-type': mime[path.extname(filename)] || 'application/octet-stream', 'cache-control':'no-store' });
-    res.end(await readFile(filename));
+    const { size } = await stat(filename);
+    const headers = { 'content-type': mime[path.extname(filename)] || 'application/octet-stream', 'cache-control':'no-store', 'accept-ranges':'bytes' };
+    // Browser video controls request byte ranges when seeking through a recording.
+    let start = 0, end = size - 1;
+    if (req.headers.range) {
+      const match = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range);
+      if (!match || (!match[1] && !match[2])) { res.writeHead(416, { 'content-range': `bytes */${size}` }).end(); return; }
+      start = match[1] ? Number(match[1]) : Math.max(0, size - Number(match[2]));
+      end = match[1] && match[2] ? Math.min(Number(match[2]), size - 1) : size - 1;
+      if (start > end || start >= size) { res.writeHead(416, { 'content-range': `bytes */${size}` }).end(); return; }
+      headers['content-range'] = `bytes ${start}-${end}/${size}`;
+    }
+    headers['content-length'] = Math.max(0, end - start + 1);
+    res.writeHead(req.headers.range ? 206 : 200, headers);
+    if (req.method === 'HEAD' || size === 0) { res.end(); return; }
+    const stream = createReadStream(filename, { start, end });
+    stream.on('error', () => res.destroy());
+    res.on('close', () => stream.destroy());
+    stream.pipe(res);
   } catch { res.writeHead(404, { 'content-type':'text/plain; charset=utf-8' }).end('Page not found'); }
 });
 server.listen(4173, '127.0.0.1', () => console.log('Portfolio preview: http://127.0.0.1:4173/ko/'));

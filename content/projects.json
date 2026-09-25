@@ -1,6 +1,6 @@
 [
   {
-    "slug": "network-processing", "category": "data", "diagram": "network", "featured": true,
+    "slug": "network-processing", "category": "data", "diagram": "network", "featured": true, "published": false,
     "period": { "ko": "재직 4년차", "en": "Career · Year 4" },
     "title": { "ko": "네트워크 데이터,\n탐색의 병목을 줄이다", "en": "Rethinking network\naddress lookup" },
     "summary": { "ko": "CIDR 대역 포함 여부를 찾는 과정에 이진탐색과 Numba를 적용한 전처리 최적화.", "en": "Preprocessing optimization with binary search and Numba for IP-to-CIDR membership lookup." },
@@ -9,25 +9,76 @@
     "stage": "experience", "cover": "", "media": [], "links": []
   },
   {
-    "slug": "drone-following", "category": "robotics", "diagram": "drone", "featured": true,
-    "period": { "ko": "대학교 4학년", "en": "University · Year 4" },
-    "title": { "ko": "보고, 추정하고,\n앞선 드론을 따라가다", "en": "Perceive, estimate,\nfollow the drone" },
-    "summary": { "ko": "깊이 카메라와 YOLO 인식 결과에서 중심 위치를 추정하고 노이즈를 제거한 드론 추종 개발.", "en": "Drone following with depth-camera perception, YOLO detections, center estimation, and noise filtering." },
-    "role": { "ko": "비전 기반 위치 추정·추종 개발", "en": "Vision-based position estimation and following" },
-    "tags": ["YOLO", "Depth camera", "Simulation"],
-    "stage": "simulation", "cover": "", "media": [], "links": []
+    "slug": "drone-following", "category": "robotics", "diagram": "drone", "featured": true, "origin": "school",
+    "period": { "ko": "2021 · 대학교 4학년", "en": "2021 · University, Year 4" },
+    "title": { "ko": "영상으로 간격을 유지하는\n드론 삼각편대 비행", "en": "Vision-based\ndrone formation flight" },
+    "summary": { "ko": "제2회 한국 인공지능 학술대회(2021)에 제1저자로 논문을 게재한 연구. YOLO·깊이 영상 기반 위치 추정과 LPF·RRT*를 연결해 3대 드론의 편대비행과 장애물 회피를 구현했습니다.", "en": "First-author paper in the proceedings of the 2nd Korea Artificial Intelligence Conference (2021). A three-drone simulation combining YOLO and depth-based localization, LPF, and RRT* for formation flight around obstacles." },
+    "role": { "ko": "논문 제1저자 / 비전 기반 위치 추정·추종 개발", "en": "First author / Visual localization and following" },
+    "publication": {
+      "cardLabel": { "ko": "제1저자 · 2021 학술대회 논문", "en": "First author · 2021 conference paper" },
+      "authorRole": { "ko": "제1저자", "en": "First author" },
+      "author": { "ko": "장지호 · 경북대학교", "en": "Ji-Ho Jang · Kyungpook National University" },
+      "venue": { "ko": "제2회 한국 인공지능 학술대회", "en": "2nd Korea Artificial Intelligence Conference" },
+      "citation": "2021 · pp. 19–20",
+      "session": { "ko": "ICT 자동차 융합 세션", "en": "ICT Automotive Convergence session" },
+      "sessionId": "S-2-3",
+      "paper": "media/drone/paper.pdf"
+    },
+    "tags": ["C++", "ROS", "YOLO", "Depth camera", "OMPL", "Gazebo"],
+    "stage": "simulation",
+    "cover": "media/drone/formation.png",
+    "coverAlt": { "ko": "Gazebo의 삼각편대: VLP-16을 탑재한 리더와 깊이 카메라를 탑재한 두 팔로워", "en": "A Gazebo formation with a LiDAR-equipped leader and two followers with depth cameras" },
+    "coverCaption": { "ko": "2021년 연구 당시의 Gazebo 화면. 중앙의 LiDAR 탑재 리더와 양쪽의 팔로워 드론.", "en": "Original Gazebo capture from the 2021 research: a LiDAR-equipped leader and two followers." },
+    "highlights": [
+      { "value": "3", "label": { "ko": "리더 1대 + 팔로워 2대", "en": "One leader + two followers" } },
+      { "value": "≈ 1.25 m", "label": { "ko": "논문에 보고한 리더–팔로워 간격", "en": "Leader–follower spacing reported in the paper" } },
+      { "value": "제1저자", "valueEn": "First author", "label": { "ko": "2021 한국 인공지능 학술대회 논문 게재", "en": "Paper in the 2021 Korea AI Conference proceedings" } }
+    ],
+    "evidenceNote": { "ko": "2021년 논문·발표자료·시뮬레이션 영상·보관 소스를 대조해 작성했습니다. 결과는 당시 시뮬레이션에서 보고한 범위이며, 실제 기체 비행이나 현재 환경에서의 재현 실험 결과는 아닙니다.", "en": "Based on the 2021 paper, presentation, simulation recordings, and archived source. Results describe the original simulation; they are not hardware flight results or a new reproduction of the experiment." },
+    "media": [
+      {
+        "type": "video", "src": "media/drone/formation-demo-4x.mp4", "poster": "media/drone/obstacle-course.png",
+        "alt": { "ko": "장애물 회피 편대비행 · 원본 4배속 편집본, 23초. 왼쪽은 Gazebo의 3대 드론, 오른쪽은 RViz의 LiDAR 지도와 생성 경로입니다.", "en": "Formation flight around obstacles. Original 4× recording, 23 seconds. Gazebo shows the three drones on the left; RViz shows the LiDAR map and planned path on the right." }
+      }
+    ],
+    "links": [
+      { "url": "media/drone/paper.pdf", "label": { "ko": "연구 논문 · PDF, 2쪽", "en": "Research paper · PDF, 2 pages, Korean" } },
+      { "url": "media/drone/presentation.pdf", "label": { "ko": "당시 발표자료 · PDF, 15쪽", "en": "Original presentation · PDF, 15 pages, Korean" } }
+    ]
   },
   {
-    "slug": "order-automation", "category": "data", "diagram": "orders", "featured": false,
-    "period": { "ko": "재직 5년차 · 개인 프로젝트", "en": "Career · Year 5 · Personal project" },
-    "title": { "ko": "주문에서\n생산 계획까지", "en": "From orders\nto production planning" },
-    "summary": { "ko": "ERP Open API를 활용해 주문·재고·제조수량 관리와 생산 계획 자동화를 만드는 개인 프로젝트.", "en": "An ongoing ERP API project for order and inventory visibility and automated production planning." },
-    "role": { "ko": "주문 자동화 프로그램 개발", "en": "Order automation development" },
-    "tags": ["Python", "ERP API", "Codex"],
-    "stage": "in-progress", "cover": "", "media": [], "links": []
+    "slug": "order-automation", "category": "data", "diagram": "orders", "featured": false, "origin": "personal",
+    "period": { "ko": "재직 5년차 · 현재 개발 중", "en": "Career · Year 5 · In development" },
+    "title": { "ko": "주문·재고 업무를\n하나의 흐름으로", "en": "Connecting orders\nand inventory" },
+    "summary": { "ko": "고객 요청부터 서비스 구현까지 혼자 개발 중인 End-to-End 프로젝트. 16개 API 동시 요청과 CSV 캐시 재사용으로 약 하루 걸리던 주문·재고 업무를 3분 이내로 줄였습니다(사용자 경험 기준).", "en": "An end-to-end project I am developing solo, from customer requirements to implementation. With 16 concurrent API requests and CSV cache reuse, the order and inventory workflow went from roughly a day to under three minutes, based on user experience." },
+    "role": { "ko": "End-to-End 1인 개발 · 요구사항 정의부터 프론트엔드·백엔드·API·데이터 처리까지", "en": "Solo end-to-end development: requirements, frontend, backend, API integration, and data processing" },
+    "tags": ["Python", "Multithreading", "Amaranth10 API", "JavaScript", "Excel", "CSV cache"],
+    "stage": "in-progress",
+    "cover": "media/orders/dashboard.jpg",
+    "coverAlt": { "ko": "직접 실행한 한국소방기구제작소 주문 업무 대시보드. 데일리 수량 파악과 생산계획 입력 카드", "en": "The running KoreaFire dashboard with daily order quantities and production-input preparation" },
+    "coverCaption": { "ko": "원본 프로그램을 직접 실행해 촬영한 업무 대시보드. 본문의 모든 주문·재고 수치는 포트폴리오용 예시입니다.", "en": "Browser capture of the original application. All order and inventory values shown in this case study are synthetic portfolio examples." },
+    "highlights": [
+      { "value": "3분 이내", "valueEn": "< 3 min", "label": { "ko": "약 하루의 업무 단축 · 사용자 경험 기준", "en": "Down from roughly a day · user-reported workflow time" } },
+      { "value": "16 Threads", "label": { "ko": "멀티스레드 · 상세 API 최대 16개 동시 요청", "en": "Multithreading · up to 16 concurrent detail requests" } },
+      { "value": "0 Calls", "label": { "ko": "CSV 캐시 재사용 · 당일 유효 캐시 재조회", "en": "CSV reuse · zero API calls for valid same-day queries" } }
+    ],
+    "showHeaderActions": false,
+    "disclosure": {
+      "title": { "ko": "End-to-End 1인 개발 · 현재 개발 중", "en": "Solo end-to-end development · Work in progress" },
+      "body": { "ko": "고객의 요청을 업무 규칙과 기능 명세로 구체화하고, 프론트엔드·Python 백엔드·ERP API 연동·데이터 처리·캐시와 성능 최적화·Windows 배포 준비까지 전 과정을 혼자 맡고 있습니다. 주문 조회와 재고 입력을 구현했으며, 생산계획 최적화를 다음 단계로 개발을 이어가고 있습니다.", "en": "I translate customer requests into business rules and feature specifications, and own the frontend, Python backend, ERP API integration, data processing, caching, performance optimization, and Windows packaging. Order retrieval and inventory input are implemented; production planning optimization is the next stage." }
+    },
+    "evidenceNote": { "ko": "2026-09-25 기준 소스, 기능 명세, 업무·최적화 설계 문서와 Windows 배포 구성을 대조했습니다. 화면은 원본 앱에 예시 주문·출고장 데이터를 연결해 브라우저에서 촬영했습니다. 생산 최적화·공장 반영은 후속 개발 범위입니다.", "en": "Reviewed against source, feature specifications, business and optimization notes, and Windows packaging on September 25, 2026. Screenshots show the original app with synthetic orders and a synthetic dispatch workbook. Production optimization and factory integration remain future work." },
+    "media": [],
+    "links": [
+      { "url": "media/orders/dashboard.jpg", "label": { "ko": "업무 대시보드 · 브라우저 캡처", "en": "Dashboard · browser capture" } },
+      { "url": "media/orders/order-details.jpg", "label": { "ko": "주문 상세 · 예시 데이터", "en": "Order details · synthetic data" } },
+      { "url": "media/orders/weekly-summary.jpg", "label": { "ko": "품번·주별 집계 · 예시 데이터", "en": "Weekly demand · synthetic data" } },
+      { "url": "media/orders/inventory-input.jpg", "label": { "ko": "현재 재고·최소재고 입력 · 예시 데이터", "en": "Inventory inputs · synthetic data" } }
+    ]
   },
   {
-    "slug": "vehicle-analysis", "category": "data", "diagram": "vehicle", "featured": false,
+    "slug": "vehicle-analysis", "category": "data", "diagram": "vehicle", "featured": false, "origin": "company",
+    "recognition": { "ko": "부문 내 우수과제 선정", "en": "Selected as a Division Outstanding Project" },
     "period": { "ko": "재직 3년차", "en": "Career · Year 3" },
     "title": { "ko": "초 단위 차량 데이터,\n11배 빠른 분석으로", "en": "Second-by-second vehicle data,\nprocessed 11× faster" },
     "summary": { "ko": "UBI 운행 기록과 보험 사고 이력을 연결한 사고·무사고 차량 분석. Excel 업무를 Python으로 자동화하고, for문 기반 계산을 pandas로 전환해 처리속도를 11배 개선했습니다.", "en": "UBI driving records joined with insurance history to compare accident and no-accident vehicles. I automated Excel work in Python and achieved an 11× processing speedup with pandas." },
@@ -46,21 +97,114 @@
     "media": [], "links": []
   },
   {
-    "slug": "foundry-tracking", "category": "data", "diagram": "foundry", "featured": false,
+    "slug": "foundry-tracking", "category": "data", "diagram": "foundry", "featured": false, "origin": "company",
+    "recognition": { "ko": "부문장 표창 수상", "en": "Division Head's Commendation" },
+    "collaboration": { "ko": "Palantir 협력과제", "en": "Collaboration with Palantir" },
     "period": { "ko": "재직 5년차", "en": "Career · Year 5" },
-    "title": { "ko": "위치 정보를\n사용자 화면으로", "en": "Location data,\nbrought into view" },
-    "summary": { "ko": "Palantir Foundry 기반 위치 추적 개발과 위치 정보를 전달하는 UI/UX 구현 경험.", "en": "Location-tracking development in Palantir Foundry, including the UI/UX for presenting location information." },
-    "role": { "ko": "위치 추적 및 UI/UX 개발", "en": "Location tracking and UI/UX development" },
-    "tags": ["Palantir Foundry", "UI/UX"],
-    "stage": "experience", "cover": "", "media": [], "links": []
+    "title": { "ko": "이동형 불법셀\n모니터링 PoC", "en": "Monitoring suspicious\nmobile femtocells" },
+    "summary": { "ko": "더미 통신 로그를 이상 플래그와 이동 경로로 가공하고, Foundry Ontology와 Workshop으로 연결한 모니터링 PoC.", "en": "A dummy-data PoC connecting telecom event processing, anomaly flags and movement routes to a monitoring interface in Palantir Foundry." },
+    "role": { "ko": "위치 추적·전처리 및 Workshop UI/UX 개발", "en": "Location processing and Workshop UI/UX development" },
+    "tags": ["Palantir Foundry", "Pipeline Builder", "PySpark", "Ontology", "Workshop"],
+    "stage": "poc",
+    "cover": "media/foundry/route-explorer.png",
+    "coverAlt": { "ko": "더미데이터 기반 Workshop 경로 탐색 화면: 대상 선택, 방문 지역, 지도, 타임라인과 체류시간 차트", "en": "Workshop route explorer using dummy data, with target selection, visited areas, map, timeline and dwell-time chart" },
+    "coverCaption": { "ko": "더미데이터로 제작한 경로 탐색 화면. 지도와 방문 지역·체류시간을 함께 확인합니다. 표시된 식별자·위치·수치는 PoC 예시입니다.", "en": "The route explorer built with dummy data. The map sits alongside visited areas and dwell times. Identifiers, locations and values are PoC examples." },
+    "disclosure": {
+      "title": { "ko": "더미데이터 기반 공개 PoC", "en": "Public PoC using dummy data" },
+      "body": { "ko": "이 페이지의 Foundry 화면과 시연영상은 더미데이터로 제작한 PoC입니다. 실제 사내 데이터로 제작한 내용은 기밀로 공개할 수 없으며, 사내 원천 데이터·운영 화면·분석 결과는 포함하지 않았습니다.", "en": "The Foundry screenshots and demonstration on this page show a PoC built with dummy data. Work produced with actual internal company data is confidential and cannot be disclosed. Internal source data, production screens and analysis results are excluded." }
+    },
+    "highlights": [
+      { "value": "Flags", "label": { "ko": "이상 후보에서 세부 지표까지", "en": "From suspicious cells to supporting indicators" } },
+      { "value": "Routes", "label": { "ko": "방문 순서·지역·체류시간 탐색", "en": "Visit sequence, areas and dwell times" } },
+      { "value": "Foundry", "label": { "ko": "전처리·Ontology·Workshop 연결", "en": "Processing, Ontology and Workshop" } }
+    ],
+    "mediaLabel": { "ko": "경로 탐색 시연 보기", "en": "Watch the route demonstration" },
+    "resourcesLabel": { "ko": "원본 화면 크게 보기", "en": "View full-resolution screenshots" },
+    "mediaTitle": { "ko": "대상과 시간을 바꾸며 이동 경로 확인", "en": "Explore routes by target and time" },
+    "evidenceNote": { "ko": "공개 PoC 캡처·원본 시연영상·보관 코드·기술 설명자료를 대조해 작성했습니다. 기능 설명은 이 자료에서 확인한 범위이며, 탐지 정확도·처리시간·운영 성과의 정량 검증을 뜻하지 않습니다. 실제 사내 데이터 기반 구현과 결과는 기밀로 비공개입니다.", "en": "Based on public PoC captures, the original recording, archived code and technical notes. These demonstrate the documented functionality, not measured detection accuracy, processing speed or production impact. Implementations and results using internal company data remain confidential." },
+    "media": [
+      {
+        "type": "video", "src": "media/foundry/route-demo.mp4", "poster": "media/foundry/route-explorer.png",
+        "alt": { "ko": "더미데이터 기반 Workshop 원본 시연 · 약 33초. 대상을 선택하고 지도 타임라인을 조작하며 경로를 확인합니다. 지도·차트의 수치는 예시 데이터입니다.", "en": "Original Workshop demonstration with dummy data, approximately 33 seconds. Target selection and map timeline controls reveal movement routes. Map and chart values are illustrative." }
+      }
+    ],
+    "links": [
+      { "url": "media/foundry/route-explorer.png", "label": { "ko": "경로 탐색 · 원본 화면", "en": "Route explorer · original screenshot" } },
+      { "url": "media/foundry/flag-monitoring.png", "label": { "ko": "이상 플래그 모니터링 · 원본 화면", "en": "Anomaly flag monitoring · original screenshot" } },
+      { "url": "media/foundry/data-lineage.png", "label": { "ko": "Data Lineage · 전체 데이터 흐름", "en": "Data Lineage · complete data flow" } },
+      { "url": "media/foundry/pipeline-builder.png", "label": { "ko": "Pipeline Builder · 전처리 구성", "en": "Pipeline Builder · processing workflow" } },
+      { "url": "media/foundry/route-demo.mp4", "label": { "ko": "경로 탐색 원본 영상 · MP4, 17.8 MB", "en": "Original route demonstration · MP4, 17.8 MB" } }
+    ]
   },
   {
-    "slug": "delta-robot", "category": "robotics", "diagram": "delta", "featured": false,
-    "period": { "ko": "대학교 3학년", "en": "University · Year 3" },
-    "title": { "ko": "델타로봇,\n설계에서 개발까지", "en": "A delta robot,\nfrom design to development" },
-    "summary": { "ko": "대학교 3학년 때 진행한 델타로봇 설계 및 개발 프로젝트.", "en": "A delta robot design and development project from my third year at university." },
-    "role": { "ko": "설계 및 개발 참여", "en": "Design and development" },
-    "tags": ["Robotics", "Design"],
-    "stage": "archive", "cover": "", "media": [], "links": []
+    "slug": "traffic-robot", "category": "robotics", "diagram": "traffic", "featured": false, "origin": "school",
+    "recognition": { "ko": "대구광역시 로봇 아이디어 공모전 우수상", "en": "Excellence Award · Daegu Robot Idea Contest" },
+    "period": { "ko": "2020 · 대학교 3학년", "en": "2020 · University, Year 3" },
+    "title": { "ko": "이동하는 카메라로\n교통안전을 살피다", "en": "A mobile camera\nfor safer streets" },
+    "summary": { "ko": "모듈형 레일을 이동하는 교통관제 로봇 ‘모범시민’. 아이디어 제안과 PoC 제작으로 대구광역시 공모전 우수상을 수상했으며, Python·OpenCV 기반 비전 개발을 담당했습니다.", "en": "Model Citizen, a traffic-monitoring robot concept on modular rails. Our idea and proof of concept received an Excellence Award in Daegu’s robot idea contest. I developed the Python and OpenCV vision PoC." },
+    "role": { "ko": "비전 개발 · 얼굴 검출·차량 검출 PoC", "en": "Computer vision · Face- and vehicle-detection PoC" },
+    "tags": ["Python", "OpenCV", "Haar Cascade", "Computer vision", "PoC"],
+    "stage": "idea-poc",
+    "cover": "media/traffic/robot-cad.jpg",
+    "coverAlt": { "ko": "모범시민 팀의 교통관제 로봇 CAD 렌더링. 레일 아래에 매달린 카메라와 옴니휠 구조", "en": "The team’s CAD rendering of a traffic-monitoring robot, with a camera suspended below a rail and omni wheels above" },
+    "coverCaption": { "ko": "당시 팀의 CAD 렌더링. 모듈형 레일과 옴니휠, 하부 카메라를 결합한 교통관제 로봇 구상.", "en": "Original team CAD rendering: a traffic-monitoring concept combining modular rails, omni wheels and a suspended camera." },
+    "highlights": [
+      { "value": "Vision", "label": { "ko": "개인 담당 · Python·OpenCV 비전 개발", "en": "My contribution · Python and OpenCV vision development" } },
+      { "value": "PoC", "label": { "ko": "차량 검출·레일 이동 시연영상", "en": "Recorded vehicle detection and rail movement" } },
+      { "value": "우수상", "valueEn": "Excellence", "label": { "ko": "제1회 대구광역시 로봇 아이디어 공모전 · 2020.11.25", "en": "1st Daegu Metropolitan City Robot Idea Contest · Nov 25, 2020" } }
+    ],
+    "resourcesLabel": { "ko": "발표자료·상장·원본 영상", "en": "Documents, award & original videos" },
+    "mediaLabel": { "ko": "비전·모터 시연영상", "en": "Watch the vision & motor demos" },
+    "mediaTitle": { "ko": "차량 검출과 레일 이동 시연", "en": "Vehicle detection and rail movement" },
+    "evidenceNote": { "ko": "2020년 제안서·발표자료·배너·CAD 렌더링·PoC 사진, 추가 제공된 비전·모터 시연영상과 상장을 대조했습니다. 개인 담당은 비전 개발입니다. 차량 검출과 레일 이동은 보관 영상의 시연 범위이며, 번호판 인식·위험 판단·문자 발송·통합관제의 운영 검증을 의미하지 않습니다.", "en": "Based on the 2020 proposal, presentation, poster, CAD renderings, prototype photo, supplied vision and motor recordings, and award certificate. My contribution was vision development. The recordings demonstrate vehicle detection and rail movement; they do not establish operational validation of plate recognition, hazard assessment, messaging or integrated traffic control." },
+    "media": [
+      { "type": "video", "src": "media/traffic/vision-demo.mp4", "poster": "media/traffic/vision-poster.png", "alt": { "ko": "비전 시연 · 약 10.5초, 무음. 야간 도로 영상의 차량에 검출 박스, car 라벨과 신뢰도 점수를 표시합니다. 원본 전체 길이·해상도를 유지한 H.264 재생본입니다.", "en": "Vision demonstration · About 10.5 seconds, silent. Boxes, car labels and confidence scores mark vehicles in nighttime road footage. H.264 playback copy retaining the original duration and resolution." } },
+      { "type": "video", "src": "media/traffic/motor-demo.mp4", "poster": "media/traffic/motor-poster.png", "alt": { "ko": "모터 시연 · 약 6.8초, 원본 영상. 팀의 시제품이 야외에 설치한 레일을 따라 이동하는 모습입니다. 세로 영상·현장 음성 포함.", "en": "Motor demonstration · About 6.8 seconds, original recording. The team’s prototype moves along an outdoor rail. Portrait video with location audio." } }
+    ],
+    "links": [
+      { "url": "media/traffic/presentation.pdf", "label": { "ko": "당시 발표자료 · PDF, 16쪽", "en": "Original presentation · PDF, 16 pages, Korean" } },
+      { "url": "media/traffic/banner.pdf", "label": { "ko": "공모전 전시 배너 · PDF, 1쪽", "en": "Contest exhibition poster · PDF, 1 page, Korean" } },
+      { "url": "media/traffic/excellence-award.jpeg", "label": { "ko": "우수상 상장 · 원본 사진", "en": "Excellence Award certificate · Original photo" } },
+      { "url": "media/traffic/vision-demo-original.mp4", "label": { "ko": "비전 시연 원본 · MPEG-4, 29.4 MB", "en": "Original vision recording · MPEG-4, 29.4 MB" } },
+      { "url": "media/traffic/motor-demo.mp4", "label": { "ko": "모터 시연 원본 · MP4, 2.3 MB", "en": "Original motor recording · MP4, 2.3 MB" } }
+    ]
+  },
+  {
+    "slug": "delta-robot", "category": "robotics", "diagram": "delta", "featured": false, "origin": "school",
+    "recognition": { "ko": "교내 혁신상 수상", "en": "University Innovation Award" },
+    "period": { "ko": "2020 · 대학교 3학년 · SE-KNU", "en": "2020 · University, Year 3 · SE-KNU" },
+    "title": { "ko": "잡초 제거를 위한\n델타로봇 설계·제작", "en": "Designing and building\na delta robot for weeding" },
+    "summary": { "ko": "CATIA로 델타로봇과 부속품을 직접 설계·제작하고, 프레임과 컨베이어 시험 환경을 구성한 제초 로봇 시제품 프로젝트.", "en": "A weed-removal robot prototype: my CATIA design and fabrication of the delta mechanism, its components, supporting frame and conveyor test setup." },
+    "role": { "ko": "델타로봇·로봇 부속품 CAD 설계 및 제작", "en": "Robot and component CAD design and fabrication" },
+    "tags": ["CATIA", "Mechanical design", "3D printing", "Prototyping"],
+    "stage": "experience",
+    "cover": "media/delta/prototype.jpg",
+    "coverAlt": { "ko": "직접 설계·제작한 델타로봇을 프로파일 프레임에 조립하고 컨베이어를 배치한 실물 시제품", "en": "The fabricated delta robot mounted in its profile frame with the conveyor test setup" },
+    "coverCaption": { "ko": "2020년 제작한 실물 시제품. 상부의 델타로봇과 하부의 컨베이어 시험 장치.", "en": "The physical prototype built in 2020, with the delta mechanism above the conveyor test setup." },
+    "highlights": [
+      { "value": "CATIA", "label": { "ko": "델타로봇·부속품의 3D 설계", "en": "3D design of the robot and components" } },
+      { "value": "3D Print", "label": { "ko": "제작용 STL과 실물 부품", "en": "Fabrication-ready STL and physical parts" } },
+      { "value": "Prototype", "label": { "ko": "프레임·컨베이어를 포함한 시제품", "en": "A prototype with a frame and conveyor" } }
+    ],
+    "mediaLabel": { "ko": "최종 시연영상 보기", "en": "Watch the demonstration" },
+    "resourcesLabel": { "ko": "설계 도면·원본 영상", "en": "Drawings & original video" },
+    "mediaTitle": { "ko": "최종 발표와 실제 동작 시연", "en": "Original presentation and hardware demonstration" },
+    "evidenceNote": { "ko": "2020년 최종 발표자료, 설계 파일·도면, 제작 사진, 회의록과 시연영상을 대조했습니다. 개인 기여는 CATIA 기반 기구 설계·제작이며, 동작 결과는 당시 실내 시제품 시연 범위입니다.", "en": "Based on the 2020 presentation, design files, drawings, fabrication photos, meeting records and demonstration. My contribution was mechanical design and fabrication in CATIA. Demonstrated results are limited to the original indoor prototype." },
+    "media": [
+      {
+        "type": "video", "src": "media/delta/final-demo.mp4", "poster": "media/delta/prototype.jpg",
+        "alt": { "ko": "최종시연영상 원본 전체 · 5분 17초. 설계 설명, 영상처리와 실물 로봇의 동작을 담은 당시 발표 영상입니다. 한국어 음성·화면 자막 포함.", "en": "Complete original video, 5 min 17 sec, covering the design, image processing and physical robot demonstration. Korean narration and embedded Korean subtitles." },
+        "chapters": [
+          { "time": 0, "label": { "ko": "처음부터", "en": "From the start" } },
+          { "time": 120, "label": { "ko": "기구 설계", "en": "Mechanical design" } },
+          { "time": 280, "label": { "ko": "실제 동작 시연", "en": "Hardware in motion" } }
+        ]
+      }
+    ],
+    "links": [
+      { "url": "media/delta/gantry-design.pdf", "label": { "ko": "프레임 설계 메모 · 원본 PDF", "en": "Original frame-design notes · PDF" } },
+      { "url": "media/delta/conveyor-drawing.pdf", "label": { "ko": "컨베이어 제작 도면 · 원본 PDF", "en": "Original conveyor fabrication drawing · PDF" } },
+      { "url": "media/delta/final-demo.mp4", "label": { "ko": "최종시연영상 원본 · MP4, 29.8 MB", "en": "Original presentation and demonstration · MP4, 29.8 MB" } }
+    ]
   }
 ]
