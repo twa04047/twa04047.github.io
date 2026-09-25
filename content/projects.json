@@ -29,11 +29,21 @@
   {
     "slug": "vehicle-analysis", "category": "data", "diagram": "vehicle", "featured": false,
     "period": { "ko": "재직 3년차", "en": "Career · Year 3" },
-    "title": { "ko": "차량 분류 기준을\n실행 가능한 코드로", "en": "Vehicle classification\ncriteria, implemented" },
-    "summary": { "ko": "보험사 제안을 위한 대형차 데이터 분석. Excel 업무를 Python으로 옮기고 주어진 분류 기준을 구현.", "en": "Large-vehicle data analysis for an insurer proposal, translating an Excel workflow and supplied classification criteria into Python." },
-    "role": { "ko": "분석·분류 코드 전체 개발", "en": "Analysis and classification code development" },
+    "title": { "ko": "초 단위 차량 데이터,\n11배 빠른 분석으로", "en": "Second-by-second vehicle data,\nprocessed 11× faster" },
+    "summary": { "ko": "UBI 운행 기록과 보험 사고 이력을 연결한 사고·무사고 차량 분석. Excel 업무를 Python으로 자동화하고, for문 기반 계산을 pandas로 전환해 처리속도를 11배 개선했습니다.", "en": "UBI driving records joined with insurance history to compare accident and no-accident vehicles. I automated Excel work in Python and achieved an 11× processing speedup with pandas." },
+    "role": { "ko": "데이터 처리·분석 코드 개발 / 성능 최적화 / Excel 자동화", "en": "Data processing and analysis / Performance optimization / Excel automation" },
     "tags": ["Python", "pandas", "Excel"],
-    "stage": "experience", "cover": "", "media": [], "links": []
+    "stage": "experience",
+    "cover": "media/vehicle/overview.svg",
+    "coverAlt": { "ko": "UBI 차량 데이터 분석: Excel을 Python으로 자동화하고 pandas로 11배 처리속도 개선", "en": "UBI vehicle analysis: Excel automation in Python and an 11× processing speedup with pandas" },
+    "coverCaption": { "ko": "수행한 업무를 요약한 개념도. 원천 데이터와 실제 운행 화면은 포함하지 않았습니다.", "en": "A schematic of the work performed. It contains no source records or recorded driving footage." },
+    "highlights": [
+      { "value": "11×", "label": { "ko": "for문 → pandas 전환으로 처리속도 개선", "en": "Processing speedup from loops to pandas" } },
+      { "value": "2.53억 행", "label": { "ko": "보관 CSV 전체 확인 · 252,781,483행", "en": "252.8 million stored CSV records inspected" }, "valueEn": "252.8M rows" },
+      { "value": "23.24 GB", "label": { "ko": "CSV 10,000개 · 데이터 컬럼 13개", "en": "10,000 CSV files · 13 data columns" } }
+    ],
+    "evidenceNote": { "ko": "처리 흐름과 컬럼은 보관 소스, 데이터 규모는 ubi_data의 파일 전수 집계를 바탕으로 작성했습니다. 11배 개선은 당시 작업 성과이며 현재 환경에서 다시 측정한 벤치마크는 아닙니다. 월간 규모는 30일·1초 간격 가정의 추정치이고, 표시한 레코드는 모두 가상 예시입니다.", "en": "The workflow and schema come from archived code; data volume was counted across the stored files. The 11× improvement is the reported project result, not a new benchmark. Monthly volume assumes 30 days at one record per second. All displayed records are synthetic." },
+    "media": [], "links": []
   },
   {
     "slug": "foundry-tracking", "category": "data", "diagram": "foundry", "featured": false,
