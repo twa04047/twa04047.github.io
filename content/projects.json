@@ -101,7 +101,7 @@
     "recognition": { "ko": "부문장 표창 수상", "en": "Division Head's Commendation" },
     "collaboration": { "ko": "Palantir 협력과제", "en": "Collaboration with Palantir" },
     "period": { "ko": "재직 5년차", "en": "Career · Year 5" },
-    "title": { "ko": "이동형 불법셀\n모니터링 PoC", "en": "Monitoring suspicious\nmobile femtocells" },
+    "title": { "ko": "이동형 셀\n모니터링 PoC", "en": "Mobile femtocell\nmonitoring PoC" },
     "summary": { "ko": "더미 통신 로그를 이상 플래그와 이동 경로로 가공하고, Foundry Ontology와 Workshop으로 연결한 모니터링 PoC.", "en": "A dummy-data PoC connecting telecom event processing, anomaly flags and movement routes to a monitoring interface in Palantir Foundry." },
     "role": { "ko": "위치 추적·전처리 및 Workshop UI/UX 개발", "en": "Location processing and Workshop UI/UX development" },
     "tags": ["Palantir Foundry", "Pipeline Builder", "PySpark", "Ontology", "Workshop"],
@@ -114,7 +114,7 @@
       "body": { "ko": "이 페이지의 Foundry 화면과 시연영상은 더미데이터로 제작한 PoC입니다. 실제 사내 데이터로 제작한 내용은 기밀로 공개할 수 없으며, 사내 원천 데이터·운영 화면·분석 결과는 포함하지 않았습니다.", "en": "The Foundry screenshots and demonstration on this page show a PoC built with dummy data. Work produced with actual internal company data is confidential and cannot be disclosed. Internal source data, production screens and analysis results are excluded." }
     },
     "highlights": [
-      { "value": "Flags", "label": { "ko": "이상 후보에서 세부 지표까지", "en": "From suspicious cells to supporting indicators" } },
+      { "value": "Flags", "label": { "ko": "이상 후보에서 세부 지표까지", "en": "From anomaly candidates to supporting indicators" } },
       { "value": "Routes", "label": { "ko": "방문 순서·지역·체류시간 탐색", "en": "Visit sequence, areas and dwell times" } },
       { "value": "Foundry", "label": { "ko": "전처리·Ontology·Workshop 연결", "en": "Processing, Ontology and Workshop" } }
     ],

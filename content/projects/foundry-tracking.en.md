@@ -1,10 +1,10 @@
 ## Project overview
 
-I developed a **Palantir Foundry monitoring PoC** for examining suspicious mobile femtocell activity and movement history. The workflow processes telecom events into indicators, narrows down candidates and presents their movement over time on a map.
+I developed a **Palantir Foundry monitoring PoC** for examining mobile femtocell activity and movement history. The workflow processes telecom events into indicators, narrows down candidates and presents their movement over time on a map.
 
 Raw logs make it difficult to see which cells warrant attention, what supports an anomaly flag, and how observations at different times connect. I organized these tasks into **anomaly flag monitoring** and **route exploration** views.
 
-This public case study uses dummy data. Cell and target identifiers, coordinates, dates and values illustrate the workflow. They do not represent confirmed cases of illegal activity.
+This public case study uses dummy data. Cell and target identifiers, coordinates, dates and values illustrate the workflow. They do not represent actual operational results.
 
 ## My contribution
 
@@ -12,7 +12,7 @@ I developed location-processing logic and preprocessing, and built the Workshop 
 
 | Area | Implementation | Use in the interface |
 | --- | --- | --- |
-| Data processing | Organize telecom event times and cell information into daily indicators and flags | Inspect suspicious candidates and supporting indicators |
+| Data processing | Organize telecom event times and cell information into daily indicators and flags | Inspect anomaly candidates and supporting indicators |
 | Location processing | Combine surrounding connection history with location metadata and build visit segments | Explore visited areas and sequence |
 | Ontology integration | Connect processed data through objects and relationships | Retrieve summaries and details for a selected cell |
 | Workshop UI/UX | Build target lists, indicator details, a map, timeline and charts | Review candidates and examine routes |
@@ -36,7 +36,7 @@ The explicit processing stages make it possible to trace a displayed result back
 
 ## Inspecting anomaly flags and their basis
 
-The monitoring view places all cells and suspicious candidates on the left, with final flags, detailed flags and indicators in the center. This supports moving from a selected candidate to the information behind its flags.
+The monitoring view places all cells and anomaly candidates on the left, with final flags, detailed flags and indicators in the center. This supports moving from a selected candidate to the information behind its flags.
 
 ![Anomaly monitoring with dummy data: cell lists on the left, final and detailed flags in the center, and a configuration panel on the right.](../../../media/foundry/flag-monitoring.png)
 
