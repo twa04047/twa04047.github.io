@@ -1,42 +1,31 @@
-## The challenge and my contribution
+## Project overview
 
-In 2021, our team prepared for the **Autonomous Driving Simulation Challenge** in the Mando autonomous-mobility competition. We used the MORAI simulator and ROS 1 to explore the path from sensor input to driving commands. The competition plan describes this category as autonomous driving on a virtual map with a simulated vehicle.
+I participated in the **Autonomous Driving Simulation Challenge** at the 2021 Mando autonomous-mobility competition. Using a virtual road in MORAI, our team connected camera, LiDAR and GPS/IMU data through ROS 1 nodes to turn sensor input into information for driving decisions.
 
-The archived team code covers camera-based lane perception, LiDAR distance and clustering, GPS/IMU path following, and steering and speed commands. **My identifiable changes** were to the camera color threshold and region of interest (ROI), an experimental `school_zone` topic, and point-selection conditions in a LiDAR forward-distance parser. I distinguish these changes from team control code and the examples supplied for the course.
+I worked on **camera color and region-of-interest (ROI) processing and forward-obstacle distance from LiDAR**. Rather than passing raw sensor data directly to control, I separated the pipeline into a camera-based region signal and a LiDAR-based distance output.
 
-## Finding lane and school-zone regions in camera frames
+## Camera: turning images into a driving signal
 
-The camera exercises decode MORAI's compressed image stream into OpenCV frames and select lane candidates by color. I changed a supplied example from HSV conversion to thresholds on the BGR image and adjusted a trapezoidal ROI for 640×480 frames.
+I decoded MORAI's compressed camera stream into OpenCV images, selected pixels with BGR color thresholds and applied a **trapezoidal ROI** over the lower road area.
 
-In `lane_roi.py`, I extended the example to calculate the fraction of selected pixels inside the ROI and publish a Boolean `school_zone` topic. **This is a color-region experiment**, not a trained sign or traffic-light detector. The thresholds and fixed image size were tuned for the archived setup and would need recalibration for another camera.
+In `lane_roi.py`, I calculated the share of selected pixels inside the ROI and published a Boolean `school_zone` topic against a configured threshold. The processing path was **color selection → ROI mask → pixel ratio → ROS topic**, giving other nodes a compact signal derived from the camera frame.
 
-![Original photograph of the MORAI simulator alongside the image-filter output.](../../../media/mando/rgb-filter-photo.jpg)
+## LiDAR: returning distance to a forward obstacle
 
-## Experimenting with LiDAR forward-distance filtering
+In `velodyne_parser.py`, I read 3D points from `/velodyne_points` and selected **forward obstacle candidates** using position, height and distance conditions. The parser calculated point distances and published the nearest value as `dist_forward`. This turned LiDAR observations into an obstacle-distance value that other ROS nodes could consume.
 
-The supplied `velodyne_parser.py` example reads 3D points from `/velodyne_points`, selects forward candidates and publishes their minimum distance to `dist_forward`. I changed the point-selection conditions and kept a separate experiment named `velodyne_parser_yolo.py`. Despite its filename, that file **only parses LiDAR distances**; it does not run YOLO inference.
+![Original photograph of a LiDAR distance-parser test in MORAI.](../../../media/mando/lidar-test-photo.jpg)
 
-The archived angle code concatenates the results of two filters rather than taking the intersection for a ±30° sector. It also lacks robust handling for frames with no selected points. I therefore treat it as an experiment, not a validated obstacle-avoidance or distance-measurement result.
+## ROS driving pipeline
 
-## The team's ROS driving pipeline
+The team developed lane perception, GPS/IMU path following and control nodes to connect sensor processing with driving decisions. My camera and LiDAR work provided perception inputs to this broader pipeline.
 
-| Stage | Archived work |
+| Input | Processing and output |
 | --- | --- |
-| Lane perception | Camera color filtering, ROI, Bird's Eye View, lane fitting and curvature estimation |
-| Path following | GPS position and IMU heading compared with route points to produce steering and speed commands |
-| Obstacle processing | LiDAR forward distance and DBSCAN clustering, plus a pedestrian-detection exercise |
-| Command selection | A controller draft combining lane and GPS commands with obstacle states into `CtrlCmd` |
+| Camera frames | Color filtering and ROI processing, then a `school_zone` signal |
+| LiDAR point cloud | Forward-obstacle candidates and nearest distance on `dist_forward` |
+| GPS/IMU and lane information | Steering and speed commands from the team's path-following and lane-processing nodes |
 
-Curvature estimation, path following and integrated control are **team work** preserved in the `EH` and `hyunho` folders. Some LiDAR-to-camera projection, HOG pedestrian-detection and DBSCAN files match the supplied training skeleton. Their presence in the archive is not evidence that I developed them independently.
+## Engineering perspective
 
-## Archived simulation records
-
-An original photograph shows the MORAI vehicle on a curved road beside lane-processing output and steering logs. The archive also contains a lane-tracing test recording and a longer driving-test recording. These are **records of simulation experiments**, not measured completion or success rates.
-
-![Original photograph of the MORAI vehicle on a curved road alongside lane-processing output and steering logs.](../../../media/mando/lane-photo.jpg)
-
-## What I learned and what remains unverified
-
-Using sensor results for control requires consistent data formats and reference frames. Camera ROI and thresholds depend on resolution and color space; LiDAR obstacle candidates depend on height, direction and range filters. Connecting the stages with ROS topics helped me understand how perception values feed steering and speed commands.
-
-The archived code still contains experimental constants, missing empty-input handling, and package-name and path inconsistencies. The material does not establish competition **completion, ranking or awards**, a working traffic-light detector, obstacle-avoidance success rates, or quantified driving performance. This case study records the scope of the 2021 implementation and experiments.
+The meaning of a sensor reading changes with **the region and coordinate conditions used to select it**. I made those choices explicit through camera color ranges and ROI geometry, and through the LiDAR parser's forward-position, height and distance filters. Publishing the results as separate ROS topics also taught me how to define a usable interface between perception and driving control.
