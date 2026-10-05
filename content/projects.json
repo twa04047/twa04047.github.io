@@ -47,6 +47,37 @@
     ]
   },
   {
+    "slug": "mando-morai", "category": "robotics", "diagram": "mando", "featured": false, "origin": "extracurricular",
+    "period": { "ko": "2021 · 교외 대회", "en": "2021 · External competition" },
+    "title": { "ko": "MORAI에서 센서를 연결한\n자율주행 시뮬레이션", "en": "Autonomous driving\nin the MORAI simulator" },
+    "summary": { "ko": "2021 만도 자율주행 시뮬레이션 대회 준비. 카메라 차선·스쿨존 영역 처리와 LiDAR 전방 거리 조건을 수정하고, 팀의 ROS 경로 추종·제어 작업에 참여했습니다.", "en": "Preparation for the 2021 Mando autonomous-driving simulation challenge. I adapted camera lane and school-zone processing and LiDAR forward-distance filtering while working with the team's ROS path-following and control code." },
+    "role": { "ko": "카메라 색상·ROI 및 스쿨존 판단 실험 / LiDAR 전방 거리 파서 수정", "en": "Camera color and ROI experiments, school-zone signal, and LiDAR distance-parser changes" },
+    "tags": ["Python", "ROS 1", "MORAI", "OpenCV", "LiDAR", "GPS/IMU"],
+    "stage": "simulation",
+    "cover": "media/mando/lane-photo.jpg",
+    "coverAlt": { "ko": "MORAI 차량의 곡선 도로 주행 화면과 차선 처리·조향 로그를 함께 촬영한 당시 사진", "en": "Original photograph showing a MORAI vehicle on a curved road alongside lane processing and steering logs" },
+    "coverCaption": { "ko": "2021년 당시의 시뮬레이션 작업 화면. 사진은 실행 장면을 보여주며 완주나 성능을 입증하지는 않습니다.", "en": "Original 2021 simulation work screen. The photograph shows an execution scene, not a completion or performance measurement." },
+    "highlights": [
+      { "value": "Camera", "label": { "ko": "개인 수정 · 색상 임계값·ROI·스쿨존 토픽", "en": "My changes · color threshold, ROI and school-zone topic" } },
+      { "value": "LiDAR", "label": { "ko": "개인 실험 · 전방 점 필터와 거리 파서", "en": "My experiment · forward-point filtering and distance parsing" } },
+      { "value": "ROS 1", "label": { "ko": "팀 작업 · 차선·GPS/IMU·제어 노드 연결", "en": "Team workflow · lane, GPS/IMU and control nodes" } }
+    ],
+    "mediaLabel": { "ko": "당시 테스트 영상 보기", "en": "Watch the archived tests" },
+    "mediaTitle": { "ko": "MORAI 시뮬레이션 테스트 기록", "en": "Archived MORAI simulation tests" },
+    "resourcesLabel": { "ko": "원본 사진·영상", "en": "Original photos and recordings" },
+    "evidenceNote": { "ko": "대회 계획안, 강의 스켈레톤과 보관 코드의 차이, 당시 촬영 사진 및 보관 영상 파일을 확인해 작성했습니다. 개인 변경은 카메라 색상·ROI·스쿨존 토픽과 LiDAR 거리 조건이며, 곡률·GPS/IMU·통합 제어는 팀 작업본입니다. 영상은 장면별로 검토하지 않았습니다. 완주·순위·수상·정량 성능 및 신호등 인지의 실행 결과는 확인되지 않았습니다.", "en": "Based on the competition plan, a comparison with the supplied training skeleton and archived code, photographs, and the preserved video files. My changes concern camera color and ROI processing, a school-zone topic, and LiDAR distance conditions; curvature, GPS/IMU and integrated control belong to the team code. The videos were not reviewed scene by scene. Completion, ranking, awards, measured performance and a working traffic-light detector are not established by these materials." },
+    "media": [
+      { "type": "video", "src": "media/mando/lane-tracing-demo.mp4", "poster": "media/mando/lane-photo.jpg", "alt": { "ko": "보관된 라인트레이싱 테스트 영상 · 약 8초. 당시 MORAI 시뮬레이션 실험 기록입니다.", "en": "Archived lane-tracing test recording, about eight seconds, from the MORAI simulation work." } },
+      { "type": "video", "src": "media/mando/simulation-test.mp4", "poster": "media/mando/rgb-filter-photo.jpg", "alt": { "ko": "보관된 자율주행 테스트 영상 · 약 1분 1초. 당시 시뮬레이션 실험 기록입니다.", "en": "Archived autonomous-driving test recording, about one minute and one second, from the simulation work." } }
+    ],
+    "links": [
+      { "url": "media/mando/lane-photo.jpg", "label": { "ko": "차선 처리·조향 로그 · 원본 사진", "en": "Lane processing and steering logs · original photo" } },
+      { "url": "media/mando/rgb-filter-photo.jpg", "label": { "ko": "색상 필터 실험 · 원본 사진", "en": "Color filter experiment · original photo" } },
+      { "url": "media/mando/lane-tracing-demo.mp4", "label": { "ko": "라인트레이싱 테스트 · 원본 MP4", "en": "Lane-tracing test · original MP4" } },
+      { "url": "media/mando/simulation-test.mp4", "label": { "ko": "자율주행 테스트 · 원본 MP4", "en": "Driving test · original MP4" } }
+    ]
+  },
+  {
     "slug": "order-automation", "category": "data", "diagram": "orders", "featured": false, "origin": "personal",
     "period": { "ko": "재직 5년차 · 현재 개발 중", "en": "Career · Year 5 · In development" },
     "title": { "ko": "주문·재고 업무를\n하나의 흐름으로", "en": "Connecting orders\nand inventory" },
