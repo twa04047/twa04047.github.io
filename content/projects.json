@@ -54,15 +54,15 @@
     "role": { "ko": "카메라 색상·ROI 및 스쿨존 판단 토픽 / LiDAR 전방 장애물 거리 파서", "en": "Camera color and ROI processing, school-zone topic, and LiDAR forward-obstacle distance parser" },
     "tags": ["Python", "ROS 1", "MORAI", "OpenCV", "LiDAR", "GPS/IMU"],
     "stage": "simulation",
-    "cover": "media/mando/cover-concept.png",
-    "coverAlt": { "ko": "가상 도로를 달리는 자율주행 차량과 주변 센서 영역을 표현한 프로젝트 개념 이미지", "en": "Concept illustration of an autonomous vehicle on a virtual road with a subtle sensor field" },
-    "coverCaption": { "ko": "MORAI 자율주행 프로젝트의 카메라·LiDAR 인지 과정을 표현한 개념 이미지.", "en": "Concept illustration of camera and LiDAR perception in the MORAI driving project." },
+    "cover": "media/mando/lidar-test-photo.jpg",
+    "coverAlt": { "ko": "MORAI 시뮬레이터와 LiDAR 거리 파서 테스트 화면을 함께 촬영한 당시 사진", "en": "Original photograph of the MORAI simulator and LiDAR distance-parser test screens" },
+    "coverCaption": { "ko": "2021년 MORAI 시뮬레이터와 LiDAR 거리 파서를 시험하던 당시 화면.", "en": "Original 2021 photograph of MORAI and the LiDAR distance-parser test." },
     "highlights": [
       { "value": "Camera", "label": { "ko": "색상 임계값·ROI·스쿨존 토픽", "en": "Color threshold, ROI and school-zone topic" } },
       { "value": "LiDAR", "label": { "ko": "전방 장애물 인식·거리 산출", "en": "Forward obstacle detection and distance output" } },
       { "value": "ROS 1", "label": { "ko": "차선·GPS/IMU·제어 노드 연결", "en": "Lane, GPS/IMU and control nodes" } }
     ],
-    "evidenceNote": { "ko": "2021년 대회 계획안과 당시 ROS 코드에 기반해 작성했습니다. 표지는 프로젝트 개념 이미지이며, 본문의 LiDAR 사진은 당시 실험 화면입니다.", "en": "Based on the 2021 competition plan and ROS code. The cover is a concept illustration; the LiDAR image in the article is an original experiment photograph." },
+    "evidenceNote": { "ko": "2021년 대회 계획안, 당시 ROS 코드와 테스트 사진을 바탕으로 작성했습니다.", "en": "Based on the 2021 competition plan, ROS code and original test photographs." },
     "media": [],
     "links": []
   },

@@ -10,11 +10,15 @@ I decoded MORAI's compressed camera stream into OpenCV images, selected pixels w
 
 In `lane_roi.py`, I calculated the share of selected pixels inside the ROI and published a Boolean `school_zone` topic against a configured threshold. The processing path was **color selection → ROI mask → pixel ratio → ROS topic**, giving other nodes a compact signal derived from the camera frame.
 
+## Vision: person-detection test
+
+We also tested object detection on the camera feed. In the preserved YOLO run, a `person` label and detection box appear over the MORAI image. The photograph shows the **visual output of that object-detection test**.
+
+![Vision test showing a person label and detection box over a MORAI camera frame.](../../../media/mando/person-detection-test.jpg)
+
 ## LiDAR: returning distance to a forward obstacle
 
 In `velodyne_parser.py`, I read 3D points from `/velodyne_points` and selected **forward obstacle candidates** using position, height and distance conditions. The parser calculated point distances and published the nearest value as `dist_forward`. This turned LiDAR observations into an obstacle-distance value that other ROS nodes could consume.
-
-![Original photograph of a LiDAR distance-parser test in MORAI.](../../../media/mando/lidar-test-photo.jpg)
 
 ## ROS driving pipeline
 
@@ -25,6 +29,10 @@ The team developed lane perception, GPS/IMU path following and control nodes to 
 | Camera frames | Color filtering and ROI processing, then a `school_zone` signal |
 | LiDAR point cloud | Forward-obstacle candidates and nearest distance on `dist_forward` |
 | GPS/IMU and lane information | Steering and speed commands from the team's path-following and lane-processing nodes |
+
+Before the competition, we checked the simulator environment with the MORAI vehicle view and ROS node outputs open together. The original photograph shows the virtual vehicle and multiple terminal outputs during that preparation.
+
+![Pre-competition test with the MORAI vehicle and ROS node outputs on screen.](../../../media/mando/pre-competition-test.jpg)
 
 ## Engineering perspective
 
