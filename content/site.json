@@ -29,10 +29,14 @@
     "en": "From designing robots as a mechanical engineering student to improving workflows with data. I work on data processing and automation at kt AX Data Lab."
   },
   "skills": [
-    { "title": { "ko": "데이터 & 플랫폼", "en": "Data & platforms" }, "items": [
+    { "title": { "ko": "데이터", "en": "Data" }, "items": [
       { "name": "Python", "icon": "media/tech/python.svg" },
       { "name": "pandas", "icon": "media/tech/pandas.svg" },
-      { "name": "PySpark", "icon": "media/tech/apachespark.svg" },
+      { "name": "PySpark", "icon": "media/tech/apachespark.svg" }
+    ] },
+    { "title": { "ko": "AI", "en": "AI" }, "items": [
+      { "name": "ChatGPT", "icon": "media/tech/chatgpt.svg" },
+      { "name": "Muse", "icon": "media/tech/muse.svg" },
       { "name": "Palantir Foundry", "icon": "media/tech/palantir.svg" },
       { "name": "Databricks", "icon": "media/tech/databricks.svg" }
     ] },
@@ -45,7 +49,9 @@
     { "title": { "ko": "로봇 & 비전", "en": "Robotics & vision" }, "items": [
       { "name": "C++", "icon": "media/tech/cplusplus.svg" },
       { "name": "ROS", "icon": "media/tech/ros.svg" },
-      { "name": "YOLO", "icon": "media/tech/yolo.svg" }
+      { "name": "YOLO", "icon": "media/tech/yolo.svg" },
+      { "name": "CATIA", "icon": "media/tech/catia.svg" },
+      { "name": "LiDAR", "icon": "media/tech/lidar.svg" }
     ] }
   ],
   "about": {

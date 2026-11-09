@@ -1,5 +1,33 @@
 [
   {
+    "slug": "storyshaper", "category": "data", "diagram": "storyshaper", "featured": true,
+    "period": { "ko": "2026.10.27–11.05 (10일, 한국시간)", "en": "Oct 26–Nov 4, 2026 (10 days, US Eastern Time)" },
+    "title": { "ko": "StoryShaper,\n아이의 답이 바꾸는 동화", "en": "StoryShaper,\na story shaped by a child" },
+    "summary": { "ko": "Meta 글로벌 AI 개발자 해커톤의 4인 팀 프로젝트. 부모 목소리로 읽고 아이의 답에 따라 그림이 바뀌는 동화에서, 답변 해석·이야기 상태 관리·안전 검증을 담당했습니다.", "en": "A four-person project for the Meta Global AI Developer Hackathon: a picture book read in a parent’s voice and reshaped by a child’s answers. I developed the story agent’s interpretation, state management, and validation." },
+    "role": { "ko": "스토리 에이전트 개발 · 프롬프트 엔지니어링 · 응답 속도 최적화", "en": "Story-agent development · Prompt engineering · Response-speed optimization" },
+    "collaboration": { "ko": "Meta Global AI Developer Hackathon · 4인 팀 개발", "en": "Meta Global AI Developer Hackathon · Four-person team" },
+    "tags": ["Python", "Muse Spark", "Meta Model API", "JavaScript", "JSON Schema"],
+    "stage": "experience",
+    "cover": "media/storyshaper/paper-house.jpg",
+    "coverAlt": { "ko": "StoryShaper에 사용한 수채화풍 종이집과 아기돼지 삽화", "en": "StoryShaper’s watercolor-style illustration of a pig beside a paper house" },
+    "coverCaption": { "ko": "팀 저장소의 실제 동화 삽화. 아이가 고른 종이집 장면이며 Muse Image로 제작한 준비 그림입니다.", "en": "An actual book illustration from the team repository: a prepared paper-house scene created with Muse Image." },
+    "highlightsStyle": "keywords",
+    "highlights": [
+      { "value": "스토리 에이전트 개발", "valueEn": "Story agent", "label": { "ko": "답 해석·이야기 진행·가드레일", "en": "Interpretation, story progression, and guardrails" } },
+      { "value": "프롬프트 엔지니어링", "valueEn": "Prompt engineering", "label": { "ko": "재료 의미와 아이 눈높이 대사 설계", "en": "Material reasoning and child-friendly dialogue" } },
+      { "value": "응답 속도 최적화", "valueEn": "Response speed", "label": { "ko": "중복 문맥 축소·선택적 검토", "en": "Less repeated context and selective review" } }
+    ],
+    "resourcesLabel": { "ko": "데모·서비스·코드 보기", "en": "Demo, live app & code" },
+    "evidenceNote": { "ko": "팀 README와 개인 개발 기록을 바탕으로 역할을 정리했습니다. 요청 수와 입력량 감소는 모형 테스트에서 확인한 결과입니다.", "en": "Responsibilities are based on the team README and personal development records. Request-count and input-size reductions were verified with mocked tests." },
+    "media": [],
+    "links": [
+      { "url": "https://youtu.be/FXtuQ7iy4z0", "label": { "ko": "대회 제출 데모 · YouTube", "en": "Submission demo · YouTube" } },
+      { "url": "https://storyshaper.vercel.app", "label": { "ko": "StoryShaper 서비스", "en": "StoryShaper live app" } },
+      { "url": "https://github.com/anmemol-beta/storyshaper", "label": { "ko": "팀 프로젝트 코드", "en": "Team source repository" } },
+      { "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon", "label": { "ko": "Meta 해커톤 공식 안내", "en": "Official Meta hackathon page" } }
+    ]
+  },
+  {
     "slug": "network-processing", "category": "data", "diagram": "network", "featured": true, "published": false,
     "period": { "ko": "재직 4년차", "en": "Career · Year 4" },
     "title": { "ko": "네트워크 데이터,\n탐색의 병목을 줄이다", "en": "Rethinking network\naddress lookup" },
@@ -7,64 +35,6 @@
     "role": { "ko": "전처리 탐색 최적화", "en": "Preprocessing lookup optimization" },
     "tags": ["Python", "PySpark", "Numba"],
     "stage": "experience", "cover": "", "media": [], "links": []
-  },
-  {
-    "slug": "drone-following", "category": "robotics", "diagram": "drone", "featured": true, "origin": "school",
-    "period": { "ko": "2021 · 대학교 4학년", "en": "2021 · University, Year 4" },
-    "title": { "ko": "영상으로 간격을 유지하는\n드론 삼각편대 비행", "en": "Vision-based\ndrone formation flight" },
-    "summary": { "ko": "제2회 한국 인공지능 학술대회(2021)에 제1저자로 논문을 게재한 연구. YOLO·깊이 영상 기반 위치 추정과 LPF·RRT*를 연결해 3대 드론의 편대비행과 장애물 회피를 구현했습니다.", "en": "First-author paper in the proceedings of the 2nd Korea Artificial Intelligence Conference (2021). A three-drone simulation combining YOLO and depth-based localization, LPF, and RRT* for formation flight around obstacles." },
-    "role": { "ko": "논문 제1저자 / 비전 기반 위치 추정·추종 개발", "en": "First author / Visual localization and following" },
-    "publication": {
-      "cardLabel": { "ko": "제1저자 · 2021 학술대회 논문", "en": "First author · 2021 conference paper" },
-      "authorRole": { "ko": "제1저자", "en": "First author" },
-      "author": { "ko": "장지호 · 경북대학교", "en": "Ji-Ho Jang · Kyungpook National University" },
-      "venue": { "ko": "제2회 한국 인공지능 학술대회", "en": "2nd Korea Artificial Intelligence Conference" },
-      "citation": "2021 · pp. 19–20",
-      "session": { "ko": "ICT 자동차 융합 세션", "en": "ICT Automotive Convergence session" },
-      "sessionId": "S-2-3",
-      "paper": "media/drone/paper.pdf"
-    },
-    "tags": ["C++", "ROS", "YOLO", "Depth camera", "OMPL", "Gazebo"],
-    "stage": "simulation",
-    "cover": "media/drone/formation.png",
-    "coverAlt": { "ko": "Gazebo의 삼각편대: VLP-16을 탑재한 리더와 깊이 카메라를 탑재한 두 팔로워", "en": "A Gazebo formation with a LiDAR-equipped leader and two followers with depth cameras" },
-    "coverCaption": { "ko": "2021년 연구 당시의 Gazebo 화면. 중앙의 LiDAR 탑재 리더와 양쪽의 팔로워 드론.", "en": "Original Gazebo capture from the 2021 research: a LiDAR-equipped leader and two followers." },
-    "highlights": [
-      { "value": "3", "label": { "ko": "리더 1대 + 팔로워 2대", "en": "One leader + two followers" } },
-      { "value": "≈ 1.25 m", "label": { "ko": "논문에 보고한 리더–팔로워 간격", "en": "Leader–follower spacing reported in the paper" } },
-      { "value": "제1저자", "valueEn": "First author", "label": { "ko": "2021 한국 인공지능 학술대회 논문 게재", "en": "Paper in the 2021 Korea AI Conference proceedings" } }
-    ],
-    "evidenceNote": { "ko": "2021년 논문·발표자료·시뮬레이션 영상·보관 소스를 대조해 작성했습니다. 결과는 당시 시뮬레이션에서 보고한 범위이며, 실제 기체 비행이나 현재 환경에서의 재현 실험 결과는 아닙니다.", "en": "Based on the 2021 paper, presentation, simulation recordings, and archived source. Results describe the original simulation; they are not hardware flight results or a new reproduction of the experiment." },
-    "media": [
-      {
-        "type": "video", "src": "media/drone/formation-demo-4x.mp4", "poster": "media/drone/obstacle-course.png",
-        "alt": { "ko": "장애물 회피 편대비행 · 원본 4배속 편집본, 23초. 왼쪽은 Gazebo의 3대 드론, 오른쪽은 RViz의 LiDAR 지도와 생성 경로입니다.", "en": "Formation flight around obstacles. Original 4× recording, 23 seconds. Gazebo shows the three drones on the left; RViz shows the LiDAR map and planned path on the right." }
-      }
-    ],
-    "links": [
-      { "url": "media/drone/paper.pdf", "label": { "ko": "연구 논문 · PDF, 2쪽", "en": "Research paper · PDF, 2 pages, Korean" } },
-      { "url": "media/drone/presentation.pdf", "label": { "ko": "당시 발표자료 · PDF, 15쪽", "en": "Original presentation · PDF, 15 pages, Korean" } }
-    ]
-  },
-  {
-    "slug": "mando-morai", "category": "robotics", "diagram": "mando", "featured": false, "origin": "extracurricular",
-    "period": { "ko": "2021 · 교외 대회", "en": "2021 · External competition" },
-    "title": { "ko": "MORAI 자율주행\n카메라·LiDAR 인지", "en": "MORAI autonomous driving\nwith camera and LiDAR" },
-    "summary": { "ko": "2021 만도 자율주행 시뮬레이션 대회에서 MORAI와 ROS 1을 이용해 카메라 차선·스쿨존 영역 처리와 LiDAR 전방 장애물 거리 산출을 구현했습니다.", "en": "For the 2021 Mando autonomous-driving simulation challenge, I worked with MORAI and ROS 1 to process camera lane and school-zone regions and calculate forward obstacle distance from LiDAR points." },
-    "role": { "ko": "카메라 색상·ROI 및 스쿨존 판단 토픽 / LiDAR 전방 장애물 거리 파서", "en": "Camera color and ROI processing, school-zone topic, and LiDAR forward-obstacle distance parser" },
-    "tags": ["Python", "ROS 1", "MORAI", "OpenCV", "LiDAR", "GPS/IMU"],
-    "stage": "simulation",
-    "cover": "media/mando/lidar-test-photo.jpg",
-    "coverAlt": { "ko": "MORAI 시뮬레이터와 LiDAR 거리 파서 테스트 화면을 함께 촬영한 당시 사진", "en": "Original photograph of the MORAI simulator and LiDAR distance-parser test screens" },
-    "coverCaption": { "ko": "2021년 MORAI 시뮬레이터와 LiDAR 거리 파서를 시험하던 당시 화면.", "en": "Original 2021 photograph of MORAI and the LiDAR distance-parser test." },
-    "highlights": [
-      { "value": "Camera", "label": { "ko": "색상 임계값·ROI·스쿨존 토픽", "en": "Color threshold, ROI and school-zone topic" } },
-      { "value": "LiDAR", "label": { "ko": "전방 장애물 인식·거리 산출", "en": "Forward obstacle detection and distance output" } },
-      { "value": "ROS 1", "label": { "ko": "차선·GPS/IMU·제어 노드 연결", "en": "Lane, GPS/IMU and control nodes" } }
-    ],
-    "evidenceNote": { "ko": "2021년 대회 계획안, 당시 ROS 코드와 테스트 사진을 바탕으로 작성했습니다.", "en": "Based on the 2021 competition plan, ROS code and original test photographs." },
-    "media": [],
-    "links": []
   },
   {
     "slug": "order-automation", "category": "data", "diagram": "orders", "featured": false, "origin": "personal",
@@ -95,26 +65,6 @@
       { "url": "media/orders/weekly-summary.jpg", "label": { "ko": "품번·주별 집계 · 예시 데이터", "en": "Weekly demand · synthetic data" } },
       { "url": "media/orders/inventory-input.jpg", "label": { "ko": "현재 재고·최소재고 입력 · 예시 데이터", "en": "Inventory inputs · synthetic data" } }
     ]
-  },
-  {
-    "slug": "vehicle-analysis", "category": "data", "diagram": "vehicle", "featured": false, "origin": "company",
-    "recognition": { "ko": "부문 내 우수과제 선정", "en": "Selected as a Division Outstanding Project" },
-    "period": { "ko": "재직 3년차", "en": "Career · Year 3" },
-    "title": { "ko": "초 단위 차량 데이터,\n11배 빠른 분석으로", "en": "Second-by-second vehicle data,\nprocessed 11× faster" },
-    "summary": { "ko": "UBI 운행 기록과 보험 사고 이력을 연결한 사고·무사고 차량 분석. Excel 업무를 Python으로 자동화하고, for문 기반 계산을 pandas로 전환해 처리속도를 11배 개선했습니다.", "en": "UBI driving records joined with insurance history to compare accident and no-accident vehicles. I automated Excel work in Python and achieved an 11× processing speedup with pandas." },
-    "role": { "ko": "데이터 처리·분석 코드 개발 / 성능 최적화 / Excel 자동화", "en": "Data processing and analysis / Performance optimization / Excel automation" },
-    "tags": ["Python", "pandas", "Excel"],
-    "stage": "experience",
-    "cover": "media/vehicle/overview.svg",
-    "coverAlt": { "ko": "UBI 차량 데이터 분석: Excel을 Python으로 자동화하고 pandas로 11배 처리속도 개선", "en": "UBI vehicle analysis: Excel automation in Python and an 11× processing speedup with pandas" },
-    "coverCaption": { "ko": "수행한 업무를 요약한 개념도. 원천 데이터와 실제 운행 화면은 포함하지 않았습니다.", "en": "A schematic of the work performed. It contains no source records or recorded driving footage." },
-    "highlights": [
-      { "value": "11×", "label": { "ko": "for문 → pandas 전환으로 처리속도 개선", "en": "Processing speedup from loops to pandas" } },
-      { "value": "2.53억 행", "label": { "ko": "보관 CSV 전체 확인 · 252,781,483행", "en": "252.8 million stored CSV records inspected" }, "valueEn": "252.8M rows" },
-      { "value": "23.24 GB", "label": { "ko": "CSV 10,000개 · 데이터 컬럼 13개", "en": "10,000 CSV files · 13 data columns" } }
-    ],
-    "evidenceNote": { "ko": "처리 흐름과 컬럼은 보관 소스, 데이터 규모는 ubi_data의 파일 전수 집계를 바탕으로 작성했습니다. 11배 개선은 당시 작업 성과이며 현재 환경에서 다시 측정한 벤치마크는 아닙니다. 월간 규모는 30일·1초 간격 가정의 추정치이고, 표시한 레코드는 모두 가상 예시입니다.", "en": "The workflow and schema come from archived code; data volume was counted across the stored files. The 11× improvement is the reported project result, not a new benchmark. Monthly volume assumes 30 days at one record per second. All displayed records are synthetic." },
-    "media": [], "links": []
   },
   {
     "slug": "foundry-tracking", "category": "data", "diagram": "foundry", "featured": false, "origin": "company",
@@ -155,6 +105,84 @@
       { "url": "media/foundry/pipeline-builder.png", "label": { "ko": "Pipeline Builder · 전처리 구성", "en": "Pipeline Builder · processing workflow" } },
       { "url": "media/foundry/route-demo.mp4", "label": { "ko": "경로 탐색 원본 영상 · MP4, 17.8 MB", "en": "Original route demonstration · MP4, 17.8 MB" } }
     ]
+  },
+  {
+    "slug": "vehicle-analysis", "category": "data", "diagram": "vehicle", "featured": false, "origin": "company",
+    "recognition": { "ko": "부문 내 우수과제 선정", "en": "Selected as a Division Outstanding Project" },
+    "period": { "ko": "재직 3년차", "en": "Career · Year 3" },
+    "title": { "ko": "초 단위 차량 데이터,\n11배 빠른 분석으로", "en": "Second-by-second vehicle data,\nprocessed 11× faster" },
+    "summary": { "ko": "UBI 운행 기록과 보험 사고 이력을 연결한 사고·무사고 차량 분석. Excel 업무를 Python으로 자동화하고, for문 기반 계산을 pandas로 전환해 처리속도를 11배 개선했습니다.", "en": "UBI driving records joined with insurance history to compare accident and no-accident vehicles. I automated Excel work in Python and achieved an 11× processing speedup with pandas." },
+    "role": { "ko": "데이터 처리·분석 코드 개발 / 성능 최적화 / Excel 자동화", "en": "Data processing and analysis / Performance optimization / Excel automation" },
+    "tags": ["Python", "pandas", "Excel"],
+    "stage": "experience",
+    "cover": "media/vehicle/overview.svg",
+    "coverAlt": { "ko": "UBI 차량 데이터 분석: Excel을 Python으로 자동화하고 pandas로 11배 처리속도 개선", "en": "UBI vehicle analysis: Excel automation in Python and an 11× processing speedup with pandas" },
+    "coverCaption": { "ko": "수행한 업무를 요약한 개념도. 원천 데이터와 실제 운행 화면은 포함하지 않았습니다.", "en": "A schematic of the work performed. It contains no source records or recorded driving footage." },
+    "highlights": [
+      { "value": "11×", "label": { "ko": "for문 → pandas 전환으로 처리속도 개선", "en": "Processing speedup from loops to pandas" } },
+      { "value": "2.53억 행", "label": { "ko": "보관 CSV 전체 확인 · 252,781,483행", "en": "252.8 million stored CSV records inspected" }, "valueEn": "252.8M rows" },
+      { "value": "23.24 GB", "label": { "ko": "CSV 10,000개 · 데이터 컬럼 13개", "en": "10,000 CSV files · 13 data columns" } }
+    ],
+    "evidenceNote": { "ko": "처리 흐름과 컬럼은 보관 소스, 데이터 규모는 ubi_data의 파일 전수 집계를 바탕으로 작성했습니다. 11배 개선은 당시 작업 성과이며 현재 환경에서 다시 측정한 벤치마크는 아닙니다. 월간 규모는 30일·1초 간격 가정의 추정치이고, 표시한 레코드는 모두 가상 예시입니다.", "en": "The workflow and schema come from archived code; data volume was counted across the stored files. The 11× improvement is the reported project result, not a new benchmark. Monthly volume assumes 30 days at one record per second. All displayed records are synthetic." },
+    "media": [], "links": []
+  },
+  {
+    "slug": "drone-following", "category": "robotics", "diagram": "drone", "featured": true, "origin": "school",
+    "period": { "ko": "2021 · 대학교 4학년", "en": "2021 · University, Year 4" },
+    "title": { "ko": "영상으로 간격을 유지하는\n드론 삼각편대 비행", "en": "Vision-based\ndrone formation flight" },
+    "summary": { "ko": "제2회 한국 인공지능 학술대회(2021)에 제1저자로 논문을 게재한 연구. YOLO·깊이 영상 기반 위치 추정과 LPF·RRT*를 연결해 3대 드론의 편대비행과 장애물 회피를 구현했습니다.", "en": "First-author paper in the proceedings of the 2nd Korea Artificial Intelligence Conference (2021). A three-drone simulation combining YOLO and depth-based localization, LPF, and RRT* for formation flight around obstacles." },
+    "role": { "ko": "논문 제1저자 / 비전 기반 위치 추정·추종 개발", "en": "First author / Visual localization and following" },
+    "publication": {
+      "cardLabel": { "ko": "제1저자 · 2021 학술대회 논문", "en": "First author · 2021 conference paper" },
+      "authorRole": { "ko": "제1저자", "en": "First author" },
+      "author": { "ko": "장지호 · 경북대학교", "en": "Ji-Ho Jang · Kyungpook National University" },
+      "venue": { "ko": "제2회 한국 인공지능 학술대회", "en": "2nd Korea Artificial Intelligence Conference" },
+      "citation": "2021 · pp. 19–20",
+      "session": { "ko": "ICT 자동차 융합 세션", "en": "ICT Automotive Convergence session" },
+      "sessionId": "S-2-3",
+      "paper": "media/drone/paper.pdf"
+    },
+    "tags": ["C++", "ROS", "YOLO", "Depth camera", "LiDAR", "OMPL", "Gazebo"],
+    "stage": "simulation",
+    "cover": "media/drone/formation.png",
+    "coverAlt": { "ko": "Gazebo의 삼각편대: VLP-16을 탑재한 리더와 깊이 카메라를 탑재한 두 팔로워", "en": "A Gazebo formation with a LiDAR-equipped leader and two followers with depth cameras" },
+    "coverCaption": { "ko": "2021년 연구 당시의 Gazebo 화면. 중앙의 LiDAR 탑재 리더와 양쪽의 팔로워 드론.", "en": "Original Gazebo capture from the 2021 research: a LiDAR-equipped leader and two followers." },
+    "highlights": [
+      { "value": "3", "label": { "ko": "리더 1대 + 팔로워 2대", "en": "One leader + two followers" } },
+      { "value": "≈ 1.25 m", "label": { "ko": "논문에 보고한 리더–팔로워 간격", "en": "Leader–follower spacing reported in the paper" } },
+      { "value": "제1저자", "valueEn": "First author", "label": { "ko": "2021 한국 인공지능 학술대회 논문 게재", "en": "Paper in the 2021 Korea AI Conference proceedings" } }
+    ],
+    "evidenceNote": { "ko": "2021년 논문·발표자료·시뮬레이션 영상·보관 소스를 대조해 작성했습니다. 결과는 당시 시뮬레이션에서 보고한 범위이며, 실제 기체 비행이나 현재 환경에서의 재현 실험 결과는 아닙니다.", "en": "Based on the 2021 paper, presentation, simulation recordings, and archived source. Results describe the original simulation; they are not hardware flight results or a new reproduction of the experiment." },
+    "media": [
+      {
+        "type": "video", "src": "media/drone/formation-demo-4x.mp4", "poster": "media/drone/obstacle-course.png",
+        "alt": { "ko": "장애물 회피 편대비행 · 원본 4배속 편집본, 23초. 왼쪽은 Gazebo의 3대 드론, 오른쪽은 RViz의 LiDAR 지도와 생성 경로입니다.", "en": "Formation flight around obstacles. Original 4× recording, 23 seconds. Gazebo shows the three drones on the left; RViz shows the LiDAR map and planned path on the right." }
+      }
+    ],
+    "links": [
+      { "url": "media/drone/paper.pdf", "label": { "ko": "연구 논문 · PDF, 2쪽", "en": "Research paper · PDF, 2 pages, Korean" } },
+      { "url": "media/drone/presentation.pdf", "label": { "ko": "당시 발표자료 · PDF, 15쪽", "en": "Original presentation · PDF, 15 pages, Korean" } }
+    ]
+  },
+  {
+    "slug": "mando-morai", "category": "robotics", "diagram": "mando", "featured": false, "origin": "extracurricular",
+    "period": { "ko": "2021 · 교외 대회", "en": "2021 · External competition" },
+    "title": { "ko": "MORAI 자율주행\n카메라·LiDAR 인지", "en": "MORAI autonomous driving\nwith camera and LiDAR" },
+    "summary": { "ko": "2021 만도 자율주행 시뮬레이션 대회에서 MORAI와 ROS 1을 이용해 카메라 차선·스쿨존 영역 처리와 LiDAR 전방 장애물 거리 산출을 구현했습니다.", "en": "For the 2021 Mando autonomous-driving simulation challenge, I worked with MORAI and ROS 1 to process camera lane and school-zone regions and calculate forward obstacle distance from LiDAR points." },
+    "role": { "ko": "카메라 색상·ROI 및 스쿨존 판단 토픽 / LiDAR 전방 장애물 거리 파서", "en": "Camera color and ROI processing, school-zone topic, and LiDAR forward-obstacle distance parser" },
+    "tags": ["Python", "ROS 1", "MORAI", "OpenCV", "LiDAR", "GPS/IMU"],
+    "stage": "simulation",
+    "cover": "media/mando/lidar-test-photo.jpg",
+    "coverAlt": { "ko": "MORAI 시뮬레이터와 LiDAR 거리 파서 테스트 화면을 함께 촬영한 당시 사진", "en": "Original photograph of the MORAI simulator and LiDAR distance-parser test screens" },
+    "coverCaption": { "ko": "2021년 MORAI 시뮬레이터와 LiDAR 거리 파서를 시험하던 당시 화면.", "en": "Original 2021 photograph of MORAI and the LiDAR distance-parser test." },
+    "highlights": [
+      { "value": "Camera", "label": { "ko": "색상 임계값·ROI·스쿨존 토픽", "en": "Color threshold, ROI and school-zone topic" } },
+      { "value": "LiDAR", "label": { "ko": "전방 장애물 인식·거리 산출", "en": "Forward obstacle detection and distance output" } },
+      { "value": "ROS 1", "label": { "ko": "차선·GPS/IMU·제어 노드 연결", "en": "Lane, GPS/IMU and control nodes" } }
+    ],
+    "evidenceNote": { "ko": "2021년 대회 계획안, 당시 ROS 코드와 테스트 사진을 바탕으로 작성했습니다.", "en": "Based on the 2021 competition plan, ROS code and original test photographs." },
+    "media": [],
+    "links": []
   },
   {
     "slug": "traffic-robot", "category": "robotics", "diagram": "traffic", "featured": false, "origin": "school",
